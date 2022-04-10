@@ -42,7 +42,7 @@ def skip_gutenberg_header(fp):
         if line.startswith('*** START OF THE PROJECT'):
             break
 
-def sentiment_analysis(file):
+def book_sentiment_analysis(file):
     import nltk
     nltk.download('vader_lexicon')
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -69,10 +69,10 @@ def main():
 
 
 
-    sentiment_gatsby = sentiment_analysis(great_gatsby)
-    sentiment_moby = sentiment_analysis(moby_dick)
-    sentiment_alice = sentiment_analysis(alice)
-    sentiment_peter = sentiment_analysis(peter_pan)
+    sentiment_gatsby = book_sentiment_analysis(great_gatsby)
+    sentiment_moby = book_sentiment_analysis(moby_dick)
+    sentiment_alice = book_sentiment_analysis(alice)
+    sentiment_peter = book_sentiment_analysis(peter_pan)
 
 
 
